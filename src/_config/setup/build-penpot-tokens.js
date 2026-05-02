@@ -1,7 +1,7 @@
 /**
- * Build a DTCG (Design Tokens Community Group) JSON file from the JEDEE
+ * Build a DTCG (Design Tokens Community Group) JSON file from the MOK
  * design tokens in `src/_data/designTokens/*.json`, ready to import into
- * the JEDEE - design tokens file on design.penpot.app.
+ * the MOK - design tokens file on design.penpot.app.
  *
  * Workflow:
  *   1. Edit any file in src/_data/designTokens/
@@ -228,4 +228,4 @@ console.log('Set summary:');
 console.log(lines.join('\n'));
 console.log(`  ${''.padEnd(20)} ${'---'.padStart(3)}`);
 console.log(`  ${'Total'.padEnd(20)} ${String(total).padStart(3)} tokens\n`);
-console.log('Next: open JEDEE - design tokens in Penpot, Tokens panel → import → select the file above.');
+console.log('Next: open MOK - design tokens in Penpot, Tokens panel → import → select the file above.');
