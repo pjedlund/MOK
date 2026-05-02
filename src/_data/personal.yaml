@@ -8,7 +8,10 @@ training: |-
   Tisdagar 18:30
   Bulltofta rekreationsområde
 homeTurf: Bokskogen i Torup
-platforms:
-  website: 'https://mok.nu'
-  eventor: 'https://eventor.orientering.se/Organisations/View/MalmoOK'
-  mpol: ''
+platforms: {}
+# External-link platforms render in the footer with an SVG icon from
+# src/assets/svg/platform/<key>.svg. Available keys: bluesky, dribbble,
+# flickr, github, gitlab, instagram, kofi, linkedin, mastodon, peertube,
+# strava, x, youtube. Add an instagram or strava entry here once MOK has
+# accounts to link. mok.nu and Eventor links live in the footer copy
+# directly, not as icon platforms.
