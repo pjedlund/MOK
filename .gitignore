@@ -1,0 +1,47 @@
+# Node modules
+node_modules
+
+# generated files
+dist
+_site
+src/_includes/css
+src/_includes/scripts
+
+# cache
+.cache
+
+# secret data
+.env
+
+# Editor configs mm
+.nova
+.vscode
+.DS_Store
+_originals
+_resources
+_backup
+
+# Local Netlify folder
+.netlify
+
+# Obsidian
+.obsidian
+.vault-nickname
+src/_obsidian
+/src/posts/notes/_fleeting
+/src/posts/notes/_sources
+
+/src/posts/articles/-drafts
+
+.claude
+.omc
+_raw/
+
+# Project notes (kept locally, not in repo)
+CLAUDE.md
+LOG.md
+TODO.md
+
+# Downloaded plugin bundle
+eleventy-excellent.plugin
+
