@@ -38,6 +38,7 @@ src/_obsidian
 _raw/
 
 # Project notes (kept locally, not in repo)
+AGENTS.md
 CLAUDE.md
 LOG.md
 TODO.md
