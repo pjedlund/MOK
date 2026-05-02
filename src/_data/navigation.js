@@ -17,14 +17,6 @@ export default {
         {
           text: 'Articles',
           url: '/articles/'
-        },
-        {
-          text: 'Reading',
-          url: '/reading/'
-        },
-        {
-          text: 'Listening',
-          url: '/listening/'
         }
       ]
     },
