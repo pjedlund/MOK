@@ -14,8 +14,9 @@
  *   3. Review the diff. The markdown body below the second `---` is untouched.
  *
  * Mapping rules:
- *   - Semantic roles (primary/secondary/tertiary/neutral) follow the
- *     SEMANTIC_ROLES map at the top of this file. Edit it to rebrand.
+ *   - Brand-accent slots (accent-1/accent-2/…) follow the ACCENT_SLOTS
+ *     map at the top of this file. Edit it to rebrand. Numbered slots
+ *     replaced the older primary/secondary/tertiary/neutral labels.
  *   - Surface / on-surface tokens are resolved from semanticColors.json
  *     (which itself references palette tokens). The dark theme is emitted
  *     with a `-dark` suffix (the spec has no native theming concept; this
@@ -54,14 +55,22 @@ const META = {
 		'src/_config/setup/build-design-md.js — edit the JSON tokens, not the YAML.',
 };
 
-// Maps DESIGN.md semantic role names → palette short names in colors.json.
-// "blue" / "green" / "red" reach the top-level keys; "gray-500" / "orange-500"
-// reach a nested shade; "base-darkest" reaches a hyphenated top-level key.
-const SEMANTIC_ROLES = {
-	primary: 'base-darkest',
-	secondary: 'orange-500',
-	tertiary: 'blue',
-	neutral: 'base-lightest',
+// Brand-accent slots. Numbered (accent-1, accent-2, …) to avoid baking
+// fragile semantics like "primary"/"secondary" into the front matter — those
+// labels are theme-fragile and read inconsistently across tools and humans
+// (see src/posts/articles/2026/2026-04-24-design-token-naming-conventions.md).
+//
+// Foundation neutrals (charcoal text, cream surface) intentionally do NOT
+// live here — they're emitted as `surface`, `on-surface`, `border-top`, and
+// the full `base-*` block below. Reserve this map for true brand voices.
+//
+// Right side reaches palette tokens by short name: "blue"/"green"/"red"
+// resolve to top-level keys; "orange-500" resolves to a nested shade.
+const ACCENT_SLOTS = {
+	'accent-1': 'blue',        // MOK ocean (primary brand voice)
+	'accent-2': 'orange-500',  // beech canopy (secondary brand voice; the
+	                           // "orange-500" key now holds a green ramp
+	                           // anchored on #5BA327)
 };
 
 // Surface / on-surface mapping — outKey ← key in semanticColors.json themes.
@@ -99,17 +108,17 @@ const COMPONENTS = {
 	},
 	link: {
 		textColor: '{colors.on-surface}',
-		underlineColor: '{colors.orange-600}',
+		underlineColor: '{colors.accent-blue}',
 	},
 	'link-hover': {
-		textColor: '{colors.accent-orange}',
+		textColor: '{colors.accent-canopy}',
 		underlineColor: '{colors.accent-red-subdued}',
 	},
 	blockquote: {
 		backgroundColor: '{colors.surface}',
 		textColor: '{colors.on-surface}',
 		typography: '{typography.blockquote}',
-		borderInlineStartColor: '{colors.accent-orange}',
+		borderInlineStartColor: '{colors.accent-canopy}',
 		padding: '{spacing.m-l}',
 	},
 	'code-block': {
@@ -233,11 +242,11 @@ async function build() {
 		components: {},
 	};
 
-	// ---- colors: semantic roles ----
-	for (const [role, ref] of Object.entries(SEMANTIC_ROLES)) {
+	// ---- colors: brand-accent slots ----
+	for (const [slot, ref] of Object.entries(ACCENT_SLOTS)) {
 		const v = paletteHex(ref, colors);
-		if (v) out.colors[role] = v;
-		else console.warn(`SEMANTIC_ROLES: cannot resolve ${role} → ${ref}`);
+		if (v) out.colors[slot] = v;
+		else console.warn(`ACCENT_SLOTS: cannot resolve ${slot} → ${ref}`);
 	}
 
 	// ---- colors: surface / on-surface (light + dark) ----
@@ -257,12 +266,18 @@ async function build() {
 		const hex = String(ref).startsWith('{') ? resolveColorRef(ref, colors) : ref;
 		if (hex) out.colors[outKey + '-dark'] = hex;
 	}
-	out.colors['border-top-dark'] = paletteHex('orange-900', colors);
+	out.colors['border-top-dark'] = paletteHex('green-deep', colors);
 
 	// ---- colors: accents (light/dark colors with subdued siblings) ----
-	out.colors['accent-orange'] = paletteHex('orange-500', colors);
+	// "accent-canopy" exposes the forest-canopy ramp's 500 step; the JSON key
+	// is still "orange" for legacy CSS compatibility, but the front-matter
+	// label tells the truth about MOK semantics.
+	out.colors['accent-canopy'] = paletteHex('orange-500', colors);
 	out.colors['accent-blue'] = paletteHex('blue', colors);
+	out.colors['accent-blue-light'] = paletteHex('blue-light', colors);
 	out.colors['accent-green'] = paletteHex('green', colors);
+	out.colors['accent-green-pale'] = paletteHex('green-pale', colors);
+	out.colors['accent-green-deep'] = paletteHex('green-deep', colors);
 	out.colors['accent-blue-subdued'] = colors.blue?.subdued?.$value;
 	out.colors['accent-green-subdued'] = colors.green?.subdued?.$value;
 	out.colors['accent-red'] = paletteHex('red', colors);

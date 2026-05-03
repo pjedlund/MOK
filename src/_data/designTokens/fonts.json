@@ -1,18 +1,18 @@
 {
   "$type": "fontFamily",
   "display": {
-    "$value": ["Source Serif", "Source Serif Fallback", "serif"],
-    "$description": "Source serif 700 with Georgia Bold as fallback",
-    "penpot": "Source Serif 4"
+    "$value": ["iA Writer Quattro", "iA Writer Quattro Fallback", "Georgia", "serif"],
+    "$description": "iA Writer Quattro at 700 for headings and the wordmark. Georgia is the metric-compatible system fallback while the woff2 files load.",
+    "penpot": "iA Writer Quattro"
   },
   "base": {
-    "$value": ["Source Sans", "Source Sans Fallback", "sans-serif"],
-    "$description": "Source Sans 3 VF with Arial as fallback",
-    "penpot": "Source Sans 3"
+    "$value": ["iA Writer Quattro", "iA Writer Quattro Fallback", "Georgia", "serif"],
+    "$description": "iA Writer Quattro at 400 for body copy, navigation, and metadata. Same family as display — MOK uses one face for both.",
+    "penpot": "iA Writer Quattro"
   },
   "mono": {
-    "$value": ["Source Code Pro", "Source Code Pro Fallback", "Dank Mono", "Fira Code", "Fira Mono", "Menlo", "Consolas", "Monaco", "monospace"],
-    "$description": "Source Code Pro with Courier New as fallback",
-    "penpot": "Source Code Pro"
+    "$value": ["iA Writer Mono", "iA Writer Mono Fallback", "Menlo", "Consolas", "Monaco", "monospace"],
+    "$description": "iA Writer Mono for code blocks, inline code, labels, and dense metadata.",
+    "penpot": "iA Writer Mono"
   }
 }
