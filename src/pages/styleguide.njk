@@ -9,7 +9,7 @@ customColors:
   - property: '--color-bg'
   - property: '--color-bg-accent'
   - property: '--color-bg-accent-2'
-  - property: '--color-accent-orange'
+  - property: '--color-accent-canopy'
   - property: '--color-accent-blue'
   - property: '--color-accent-green'
 customGradients:
@@ -20,11 +20,11 @@ colorGroups:
   - heading: 'Base palette'
     description: 'Foundational theme tones. Composed into the semantic theme variables in variables.css.'
     prefix: 'base'
-  - heading: 'Neutral shades'
-    description: 'Gray scale generated from a single base in OKLCH space. Includes the standalone gray-250.'
+  - heading: 'Warm-neutral shades'
+    description: 'Warm-neutral scale generated from a single base in OKLCH space, anchored on warm-mid #6B6560. The JSON palette key is still `gray` for legacy CSS-variable compatibility; the values are MOK warm-neutral (cream → charcoal). Includes the standalone gray-250 used for dark-theme body text.'
     prefix: 'gray'
-  - heading: 'Vibrant shades'
-    description: 'Orange scale generated from a single base in OKLCH space.'
+  - heading: 'Forest-canopy shades'
+    description: 'Forest-canopy scale generated from a single base in OKLCH space, anchored on beech canopy #5BA327. The JSON palette key is still `orange` for legacy CSS-variable compatibility; the values are MOK forest.'
     prefix: 'orange'
   - heading: 'Accent colors'
     description: 'Each has a chroma-reduced subdued variant used in dark theme.'
@@ -50,13 +50,13 @@ colorGroups:
         <a href="#" class="button">Default button</a>
       </li>
       <li>
-        <a href="#" class="button" data-button-variant="primary">primary button</a>
+        <a href="#" class="button" data-button-variant="accent-1">accent-1 (MOK ocean)</a>
       </li>
       <li>
-        <a href="#" class="button" data-button-variant="secondary">secondary button</a>
+        <a href="#" class="button" data-button-variant="accent-2">accent-2 (beech canopy)</a>
       </li>
       <li>
-        <a href="#" class="button" data-button-variant="tertiary">tertiary button</a>
+        <a href="#" class="button" data-button-variant="accent-3">accent-3 (forest moss)</a>
       </li>
       <li>
         <a href="#" class="button" data-ghost-button>Ghost button</a>
