@@ -1,6 +1,6 @@
 {
   "$type": "color",
-  "$description": "Semantic color tokens that swap between light and dark themes. Names mirror the --color-* CSS variables in src/assets/css/global/base/variables.css. Values reference palette tokens from colors.json via {curly.brackets} so any palette change cascades automatically. Pushed to Penpot's theme/light and theme/dark sets by build-penpot-tokens.js.",
+  "$description": "Semantic color tokens that swap between light (dag i Bokskogen) and dark (natt i Bokskogen) themes. Names mirror the --color-* CSS variables in src/assets/css/global/base/variables.css. Light is anchored on warm cream surfaces with charcoal text; dark mirrors the footer in _resources/mok_full_page_layout.html — charcoal background, pale-green text, forest-muted labels, light-MOK-blue links, deep-forest dividers. Values reference palette tokens from colors.json via {curly.brackets} so any palette change cascades automatically. Pushed to Penpot's theme/light and theme/dark sets by build-penpot-tokens.js.",
   "themes": {
     "light": {
       "bg":          "{color.base.lightest}",
@@ -11,12 +11,12 @@
       "headline":    "{color.base.darkest}"
     },
     "dark": {
-      "bg":          "{color.gray.900}",
-      "bg-accent":   "{color.gray.700}",
-      "bg-accent-2": "{color.gray.600}",
-      "text":        "{color.gray.250}",
-      "text-accent": "{color.gray.200}",
-      "headline":    "{color.gray.200}"
+      "bg":          "{color.base.darkest}",
+      "bg-accent":   "{color.green.deep}",
+      "bg-accent-2": "{color.gray.800}",
+      "text":        "{color.green.pale}",
+      "text-accent": "{color.green}",
+      "headline":    "{color.green.pale}"
     }
   }
 }

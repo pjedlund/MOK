@@ -18,15 +18,15 @@ If no JavaScript is available, the grid will fall back to the regular grid layou
 ```
 
 <div><custom-masonry>
-   <div style="background-color: var(--color-accent-orange); aspect-ratio: 3/2;"></div>
+   <div style="background-color: var(--color-accent-canopy); aspect-ratio: 3/2;"></div>
 	 	<div></div>
 		<div style="background-color: var(--color-accent-green); aspect-ratio: 4/5;"></div>
-		<div style="background-color: var(--color-accent-orange);"></div>
+		<div style="background-color: var(--color-accent-canopy);"></div>
 		<div></div>
 		<div style="background-color: var(--color-accent-blue); aspect-ratio: 5/4;"></div>
 		<div></div>
 		<div style="background-color: var(--color-accent-blue);"></div>
-    <div style="background-color: var(--color-accent-orange); aspect-ratio: 16/9;"></div>
+    <div style="background-color: var(--color-accent-canopy); aspect-ratio: 16/9;"></div>
 	 	<div></div>
 </custom-masonry></div>
 

@@ -1,7 +1,7 @@
 # Penpot tokens
 
 How the design tokens in `src/_data/designTokens/` are pushed into the
-**JEDEE - design tokens** file on [design.penpot.app](https://design.penpot.app).
+**MOK - design tokens** file on [design.penpot.app](https://design.penpot.app).
 
 ## TL;DR
 
@@ -12,7 +12,7 @@ npm run penpot:tokens
 That writes two files from the same JSON sources:
 
 - `tokens/penpot-tokens.dtcg.json` — import in Penpot
-  (JEDEE - design tokens file → **Tokens panel** → import)
+  (MOK - design tokens file → **Tokens panel** → import)
 - `../DESIGN.md` — Anthropic-style design-system spec for AI agents
   and humans (front matter is regenerated; the markdown body is
   preserved verbatim — humans own the prose, the script owns the tokens)
@@ -68,11 +68,11 @@ transformations:
   background/text/headline tokens defined in `semanticColors.json`, which
   mirror the `--color-*` CSS variables in `variables.css`.
 - **Font families use the Penpot-recognized name.** Penpot's font registry
-  uses canonical names like `Source Serif 4` and `Source Sans 3`, not the
-  CSS-side family + fallback stack. Each entry in `fonts.json` carries an
-  optional `penpot` field (e.g. `"penpot": "Source Serif 4"`); the build
-  script prefers it and emits a single-element `fontFamilies` value. The
-  full CSS fallback stack stays untouched in `$value` for the website.
+  uses canonical names like `iA Writer Quattro` and `iA Writer Mono`, not
+  the CSS-side family + fallback stack. Each entry in `fonts.json` carries
+  an optional `penpot` field (e.g. `"penpot": "iA Writer Quattro"`); the
+  build script prefers it and emits a single-element `fontFamilies` value.
+  The full CSS fallback stack stays untouched in `$value` for the website.
 - **Typography composites bundle several atomic tokens.** Each entry in
   `typography.json` becomes a `type.*` token of Penpot's `typography`
   type, with inner keys (`fontFamily`, `fontWeight`, `fontSize`,

@@ -56,20 +56,23 @@
   transform: scale(99%);
 }
 
-/* Variants */
-.button[data-button-variant='primary'] {
-  --button-bg: var(--color-accent-orange);
-  --button-color: var(--color-light);
-  --button-color: color-mix(in oklab, var(--color-accent-orange) 5%, var(--color-light));
-}
-
-.button[data-button-variant='secondary'] {
+/* Variants — numbered accent slots, matching the front-matter accent-N
+   convention. Brand hierarchy: accent-1 is the MOK ocean (brand voice),
+   accent-2 is the beech canopy (secondary accent), accent-3 is forest
+   moss (quiet tertiary cue). */
+.button[data-button-variant='accent-1'] {
   --button-bg: var(--color-accent-blue);
   --button-color: var(--color-light);
   --button-color: color-mix(in oklab, var(--color-accent-blue) 5%, var(--color-light));
 }
 
-.button[data-button-variant='tertiary'] {
+.button[data-button-variant='accent-2'] {
+  --button-bg: var(--color-accent-canopy);
+  --button-color: var(--color-light);
+  --button-color: color-mix(in oklab, var(--color-accent-canopy) 5%, var(--color-light));
+}
+
+.button[data-button-variant='accent-3'] {
   --button-bg: var(--color-accent-green);
   --button-color: var(--color-dark);
   --button-color: color-mix(in oklab, var(--color-accent-green) 10%, var(--color-dark));
@@ -107,7 +110,7 @@
   --button-bg: var(--color-bg);
   --button-border-color: var(--color-bg);
   --button-color: var(--color-text);
-  --button-hover-color: var(--color-accent-orange);
+  --button-hover-color: var(--color-accent-canopy);
   --button-radius: 50%;
   aspect-ratio: 1;
   display: inline-grid;

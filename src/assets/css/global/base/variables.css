@@ -12,8 +12,8 @@
   --stroke: 1px solid var(--color-bg-accent);
 
   --gradient-conic: conic-gradient(
-    var(--color-accent-orange) 0 28%,
-    var(--color-accent-blue) 0 67%,
+    var(--color-accent-blue) 0 28%,
+    var(--color-accent-canopy) 0 67%,
     var(--color-accent-green) 0 100%
   );
   --gradient-slate: linear-gradient(
@@ -26,8 +26,8 @@
   --gradient-stripes: linear-gradient(
     45deg,
     var(--color-gray-900) 0 75%,
-    var(--color-accent-orange) 0 85%,
-    var(--color-accent-blue) 0 92%,
+    var(--color-accent-blue) 0 85%,
+    var(--color-accent-canopy) 0 92%,
     var(--color-accent-green) 0 100%
   );
 
@@ -35,77 +35,79 @@
   --color-dark: var(--color-gray-900);
   --color-mid: var(--color-gray-400);
 
-  --color-logo-icon: var(--color-orange-500);
+  --color-logo-icon: var(--color-blue);
   --color-border-height: 1rem;
 }
 
-/* Light theme */
+/* Light theme — dag i Bokskogen: cream surface, charcoal text, MOK ocean accent. */
 :root,
 :root[data-theme='light'] {
   --color-text: var(--color-base-darkest);
   --color-headline: var(--color-base-darkest);
   --color-bg: var(--color-base-lightest);
 
-  --color-accent-orange: var(--color-orange-500);
+  --color-accent-canopy: var(--color-orange-500);
   --color-accent-blue: var(--color-blue);
   --color-accent-green: var(--color-green);
 
   --color-text-accent: var(--color-gray-700);
   --color-bg-accent: white;
   --color-bg-accent-2: var(--color-gray-300);
-  /* border top for body */
+  /* warm border-top band */
   --color-border-top: var(--color-base-light);
-  --color-logo-icon: var(--color-base-dark);
+  --color-logo-icon: var(--color-blue);
 
   --color-code-bg: color-mix(in oklab, var(--color-bg) 97%, rgb(0, 0, 0));
   --code-border-color: color-mix(in oklab, var(--color-bg) 96%, rgb(0, 0, 0));
 
-  --color-link-underline: var(--color-orange-600);
-  --color-link-underline-hover: var(--color-red-subdued);
+  --color-link-underline: var(--color-blue);
+  --color-link-underline-hover: var(--color-accent-canopy);
 }
 
-/* Dark theme */
+/* Dark theme — natt i Bokskogen: charcoal background, pale-green text,
+   forest-muted labels, light-MOK-blue links, deep-forest dividers. Mirrors
+   the footer in _resources/mok_full_page_layout.html. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-text: var(--color-gray-250);
-    --color-headline: var(--color-gray-200);
-    --color-bg: var(--color-gray-900);
+    --color-text: var(--color-green-pale);
+    --color-headline: var(--color-green-pale);
+    --color-bg: var(--color-base-darkest);
 
-    --color-accent-orange: var(--color-orange-500);
-    --color-accent-blue: var(--color-blue-subdued);
-    --color-accent-green: var(--color-green-subdued);
+    --color-accent-canopy: var(--color-orange-500);
+    --color-accent-blue: var(--color-blue-light);
+    --color-accent-green: var(--color-green);
 
-    --color-text-accent: var(--color-gray-200);
-    --color-bg-accent: var(--color-gray-700);
-    --color-bg-accent-2: var(--color-gray-600);
-    /* border top for body */
-    --color-border-top: var(--color-orange-900);
-    --color-logo-icon: var(--color-orange-700);
+    --color-text-accent: var(--color-green);
+    --color-bg-accent: var(--color-green-deep);
+    --color-bg-accent-2: var(--color-gray-800);
+    --color-border-top: var(--color-green-deep);
+    --color-logo-icon: var(--color-blue-light);
 
     --color-code-bg: color-mix(in oklab, var(--color-bg) 80%, rgb(0, 0, 0));
     --code-border-color: color-mix(in oklab, var(--color-bg) 95%, rgb(255, 255, 255));
 
-    --color-link-text: var(--color-orange-500);
-    --color-link-underline-hover: var(--color-red-subdued);
+    --color-link-text: var(--color-blue-light);
+    --color-link-underline: var(--color-blue-light);
+    --color-link-underline-hover: var(--color-accent-canopy);
   }
 }
 
 :root[data-theme='dark'] {
-  --color-text: var(--color-gray-250);
-  --color-headline: var(--color-gray-200);
-  --color-bg: var(--color-gray-900);
+  --color-text: var(--color-green-pale);
+  --color-headline: var(--color-green-pale);
+  --color-bg: var(--color-base-darkest);
 
-  --color-accent-orange: var(--color-orange-500);
-  --color-accent-blue: var(--color-blue-subdued);
-  --color-accent-green: var(--color-green-subdued);
+  --color-accent-canopy: var(--color-orange-500);
+  --color-accent-blue: var(--color-blue-light);
+  --color-accent-green: var(--color-green);
 
-  --color-text-accent: var(--color-gray-200);
-  --color-bg-accent: var(--color-gray-700);
-  --color-bg-accent-2: var(--color-gray-600);
-  /* border top for body */
-  --color-border-top: var(--color-orange-900);
-  --color-logo-icon: var(--color-orange-700);
+  --color-text-accent: var(--color-green);
+  --color-bg-accent: var(--color-green-deep);
+  --color-bg-accent-2: var(--color-gray-800);
+  --color-border-top: var(--color-green-deep);
+  --color-logo-icon: var(--color-blue-light);
 
-  --color-link-text: var(--color-orange-500);
-  --color-link-underline-hover: var(--color-red-subdued);
+  --color-link-text: var(--color-blue-light);
+  --color-link-underline: var(--color-blue-light);
+  --color-link-underline-hover: var(--color-accent-canopy);
 }

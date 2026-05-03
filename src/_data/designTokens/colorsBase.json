@@ -1,24 +1,27 @@
 {
   "title": "Colors",
-  "description": "Hex color codes that can be shared, cross-platform. They can be converted at point of usage, such as HSL for web or CMYK for print. neutral and vibrant colors are converted to color palettes, fixed colors are kept as they are",
+  "description": "Hex anchors for the MOK palette. Neutral and vibrant entries seed oklch ramps via create-colors.js; light_dark entries become single colors with auto-derived subdued siblings; palette entries are passed through verbatim. Palette key names (gray/orange/blue/green/red) are preserved from the previous design system to avoid a CSS-wide rename — values are now MOK-aligned (warm cream → charcoal, beech-canopy green, MOK ocean blue).",
   "palette": [
-    { "name": "base-darkest", "value": "#495464" },
-    { "name": "base-dark", "value": "#bbbfca" },
-    { "name": "base-light", "value": "#dddee8" },
-    { "name": "base-lightest", "value": "#f4f4f2" }
+    { "name": "base-darkest", "value": "#1A1919" },
+    { "name": "base-dark", "value": "#6B6560" },
+    { "name": "base-light", "value": "#ddd5c4" },
+    { "name": "base-lightest", "value": "#F7F3EC" }
   ],
   "shades_neutral": [
-    { "name": "Gray", "value": "#495464" }
+    { "name": "Gray", "value": "#6B6560" }
   ],
   "shades_vibrant": [
-    { "name": "Orange", "value": "#EF7E40" }
+    { "name": "Orange", "value": "#5BA327" }
   ],
   "light_dark": [
-    { "name": "Red", "value": "#644B49" },
-    { "name": "Blue", "value": "#245375" },
-    { "name": "Green", "value": "#626449" }
+    { "name": "Red", "value": "#6B4D49" },
+    { "name": "Blue", "value": "#0089BD" },
+    { "name": "Green", "value": "#6A8465" }
   ],
   "standalone": [
-    { "group": "gray", "label": "250", "value": "#C8CACC" }
+    { "group": "gray", "label": "250", "value": "#D8D4CD" },
+    { "group": "blue", "label": "light", "value": "#71C8E6" },
+    { "group": "green", "label": "pale", "value": "#DCE8D8" },
+    { "group": "green", "label": "deep", "value": "#2a3028" }
   ]
 }

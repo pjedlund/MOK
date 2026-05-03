@@ -3,99 +3,99 @@
     "color": {
       "gray": {
         "100": {
-          "$value": "#f7f8fb",
+          "$value": "#f9f8f7",
           "$type": "color"
         },
         "200": {
-          "$value": "#e3e5e7",
+          "$value": "#e5e4e3",
           "$type": "color"
         },
         "250": {
-          "$value": "#C8CACC",
+          "$value": "#D8D4CD",
           "$type": "color"
         },
         "300": {
-          "$value": "#acaeb1",
+          "$value": "#afaead",
           "$type": "color"
         },
         "400": {
-          "$value": "#7d8085",
+          "$value": "#81807e",
           "$type": "color"
         },
         "500": {
-          "$value": "#606368",
+          "$value": "#656361",
           "$type": "color"
         },
         "600": {
-          "$value": "#44484d",
+          "$value": "#494746",
           "$type": "color"
         },
         "700": {
-          "$value": "#383b3f",
+          "$value": "#3c3a39",
           "$type": "color"
         },
         "800": {
-          "$value": "#2b2e32",
+          "$value": "#2f2d2c",
           "$type": "color"
         },
         "900": {
-          "$value": "#141619",
+          "$value": "#171615",
           "$type": "color"
         }
       },
       "orange": {
         "100": {
-          "$value": "#ffece1",
+          "$value": "#e9f7e2",
           "$type": "color"
         },
         "200": {
-          "$value": "#ffdec3",
+          "$value": "#d5f7c4",
           "$type": "color"
         },
         "300": {
-          "$value": "#ffb78a",
+          "$value": "#aae58b",
           "$type": "color"
         },
         "400": {
-          "$value": "#f68f5a",
+          "$value": "#81c35b",
           "$type": "color"
         },
         "500": {
-          "$value": "#d0621e",
+          "$value": "#549b1c",
           "$type": "color"
         },
         "600": {
-          "$value": "#a73c00",
+          "$value": "#2f7600",
           "$type": "color"
         },
         "700": {
-          "$value": "#8c2100",
+          "$value": "#155f00",
           "$type": "color"
         },
         "800": {
-          "$value": "#711a00",
+          "$value": "#104b00",
           "$type": "color"
         },
         "900": {
-          "$value": "#320100",
+          "$value": "#001e00",
           "$type": "color"
         }
       },
       "base": {
         "darkest": {
-          "$value": "#495464",
+          "$value": "#1A1919",
           "$type": "color"
         },
         "dark": {
-          "$value": "#bbbfca",
+          "$value": "#6B6560",
           "$type": "color"
         },
         "light": {
-          "$value": "#dddee8",
+          "$value": "#ddd5c4",
           "$type": "color"
         },
         "lightest": {
-          "$value": "#f4f4f2",
+          "$value": "#F7F3EC",
           "$type": "color"
         }
       }
@@ -105,15 +105,15 @@
     "color": {
       "semantic": {
         "red": {
-          "$value": "#644B49",
+          "$value": "#6B4D49",
           "$type": "color"
         },
         "blue": {
-          "$value": "#245375",
+          "$value": "#0089BD",
           "$type": "color"
         },
         "green": {
-          "$value": "#626449",
+          "$value": "#6A8465",
           "$type": "color"
         }
       },
@@ -147,40 +147,40 @@
     "color": {
       "semantic": {
         "red": {
-          "$value": "#614d4b",
+          "$value": "#674f4c",
           "$type": "color"
         },
         "blue": {
-          "$value": "#2f536e",
+          "$value": "#3788b1",
           "$type": "color"
         },
         "green": {
-          "$value": "#62644e",
+          "$value": "#6e826a",
           "$type": "color"
         }
       },
       "bg": {
-        "$value": "{color.gray.900}",
+        "$value": "{color.base.darkest}",
         "$type": "color"
       },
       "bg-accent": {
-        "$value": "{color.gray.700}",
+        "$value": "{color.green.deep}",
         "$type": "color"
       },
       "bg-accent-2": {
-        "$value": "{color.gray.600}",
+        "$value": "{color.gray.800}",
         "$type": "color"
       },
       "text": {
-        "$value": "{color.gray.250}",
+        "$value": "{color.green.pale}",
         "$type": "color"
       },
       "text-accent": {
-        "$value": "{color.gray.200}",
+        "$value": "{color.green}",
         "$type": "color"
       },
       "headline": {
-        "$value": "{color.gray.200}",
+        "$value": "{color.green.pale}",
         "$type": "color"
       }
     }
@@ -190,24 +190,24 @@
       "family": {
         "display": {
           "$value": [
-            "Source Serif 4"
+            "iA Writer Quattro"
           ],
           "$type": "fontFamilies",
-          "$description": "Source serif 700 with Georgia Bold as fallback"
+          "$description": "iA Writer Quattro at 700 for headings and the wordmark. Georgia is the metric-compatible system fallback while the woff2 files load."
         },
         "base": {
           "$value": [
-            "Source Sans 3"
+            "iA Writer Quattro"
           ],
           "$type": "fontFamilies",
-          "$description": "Source Sans 3 VF with Arial as fallback"
+          "$description": "iA Writer Quattro at 400 for body copy, navigation, and metadata. Same family as display — MOK uses one face for both."
         },
         "mono": {
           "$value": [
-            "Source Code Pro"
+            "iA Writer Mono"
           ],
           "$type": "fontFamilies",
-          "$description": "Source Code Pro with Courier New as fallback"
+          "$description": "iA Writer Mono for code blocks, inline code, labels, and dense metadata."
         }
       },
       "weight": {

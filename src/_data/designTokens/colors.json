@@ -2,93 +2,102 @@
   "$type": "color",
   "gray": {
     "100": {
-      "$value": "#f7f8fb"
+      "$value": "#f9f8f7"
     },
     "200": {
-      "$value": "#e3e5e7"
+      "$value": "#e5e4e3"
     },
     "250": {
-      "$value": "#C8CACC"
+      "$value": "#D8D4CD"
     },
     "300": {
-      "$value": "#acaeb1"
+      "$value": "#afaead"
     },
     "400": {
-      "$value": "#7d8085"
+      "$value": "#81807e"
     },
     "500": {
-      "$value": "#606368"
+      "$value": "#656361"
     },
     "600": {
-      "$value": "#44484d"
+      "$value": "#494746"
     },
     "700": {
-      "$value": "#383b3f"
+      "$value": "#3c3a39"
     },
     "800": {
-      "$value": "#2b2e32"
+      "$value": "#2f2d2c"
     },
     "900": {
-      "$value": "#141619"
+      "$value": "#171615"
     }
   },
   "orange": {
     "100": {
-      "$value": "#ffece1"
+      "$value": "#e9f7e2"
     },
     "200": {
-      "$value": "#ffdec3"
+      "$value": "#d5f7c4"
     },
     "300": {
-      "$value": "#ffb78a"
+      "$value": "#aae58b"
     },
     "400": {
-      "$value": "#f68f5a"
+      "$value": "#81c35b"
     },
     "500": {
-      "$value": "#d0621e"
+      "$value": "#549b1c"
     },
     "600": {
-      "$value": "#a73c00"
+      "$value": "#2f7600"
     },
     "700": {
-      "$value": "#8c2100"
+      "$value": "#155f00"
     },
     "800": {
-      "$value": "#711a00"
+      "$value": "#104b00"
     },
     "900": {
-      "$value": "#320100"
+      "$value": "#001e00"
     }
   },
   "red": {
-    "$value": "#644B49",
+    "$value": "#6B4D49",
     "subdued": {
-      "$value": "#614d4b"
+      "$value": "#674f4c"
     }
   },
   "blue": {
-    "$value": "#245375",
+    "$value": "#0089BD",
     "subdued": {
-      "$value": "#2f536e"
+      "$value": "#3788b1"
+    },
+    "light": {
+      "$value": "#71C8E6"
     }
   },
   "green": {
-    "$value": "#626449",
+    "$value": "#6A8465",
     "subdued": {
-      "$value": "#62644e"
+      "$value": "#6e826a"
+    },
+    "pale": {
+      "$value": "#DCE8D8"
+    },
+    "deep": {
+      "$value": "#2a3028"
     }
   },
   "base-darkest": {
-    "$value": "#495464"
+    "$value": "#1A1919"
   },
   "base-dark": {
-    "$value": "#bbbfca"
+    "$value": "#6B6560"
   },
   "base-light": {
-    "$value": "#dddee8"
+    "$value": "#ddd5c4"
   },
   "base-lightest": {
-    "$value": "#f4f4f2"
+    "$value": "#F7F3EC"
   }
 }
